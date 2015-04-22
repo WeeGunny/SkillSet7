@@ -16,7 +16,8 @@ public class e2a {
         for (int i = 0; i < sName.length(); i++) {
             cLetter = sName.charAt(i);
             if (Character.isDigit(cLetter) == true) {
-                System.out.println("You Must not tell lies");
+                System.out.println("No numbers in your name please");
+                break;
             }
         }
     }
