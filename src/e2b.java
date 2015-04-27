@@ -16,23 +16,26 @@ public class e2b {
         sLast = split[1];
         cFirst = sFirst.charAt(0);
         cFirst2 = sLast.charAt(0);
-
-        if (Character.isLowerCase(cFirst) || Character.isLowerCase(cFirst2)) {
+        bFirst=Conditions(sFirst,cFirst);
+         bLast=Conditions(sLast,cFirst2);
+        if (bFirst==true&&bLast==true){
+            System.out.println("Congratulations you can enter your name right:)");
+        }
+    }
+    
+    public static boolean Conditions(String sName, int cFirst) {
+        Character cLetter;
+        if (Character.isLowerCase(cFirst)) {
             System.out.println("The First letter need to be uppercase");
+            return false;
         }
-        for (int i = 0; i < sFirst.length(); i++) {
-            cLetter = sFirst.charAt(i);
+        for (int i = 0; i < sName.length(); i++) {
+            cLetter = sName.charAt(i);
             if (Character.isDigit(cLetter) == true) {
                 System.out.println("No numbers in your name please");
-                break;
+                return false;
             }
         }
-        for (int i = 0; i < sLast.length(); i++) {
-            cLetter = sLast.charAt(i);
-            if (Character.isDigit(cLetter) == true) {
-                System.out.println("No numbers in your name please");
-                break;
-            }
-        }
+        return true;
     }
 }
