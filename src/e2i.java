@@ -20,6 +20,9 @@ public class e2i {
                 System.out.print(" ");
             } else {
                 nMove = (int) cLetter + nKey;
+                if(nMove>26){
+                    nMove-=26;
+                }
                 cMove = (char) nMove;
                 System.out.print(cMove);
             }
