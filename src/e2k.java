@@ -10,7 +10,6 @@ public class e2k {
         String sUpper = sSentence.toUpperCase();
         String[] words = sUpper.split(" "); 
         for(int i=0;i<words.length;i++){
-            for(int j=0;j<words[i].length();j++)
                 cLetter=words[i].charAt(0);
             System.out.print(words[i].substring(1)+cLetter+"AY ");
         }
