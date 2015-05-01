@@ -25,7 +25,6 @@ public class SLtest7 {
         System.out.println(nGood+" Good Words");
         System.out.println(nBad+" Bad Words");
     }
-
     public static boolean IsGood(String sWord) {
         Character cLetter;
         for (int i = 0; i < sWord.length(); i++) {
