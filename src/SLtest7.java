@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class SLtest7 {
 
     public static void main(String[] args) {
-        int nGood = 0, nBad = 0,nTotal=0;
+        int nGood = 0, nBad = 0, nTotal = 0;
         boolean bIsGood;
         Scanner sin = new Scanner(System.in);
         System.out.println("enter a Sentence");
@@ -12,7 +12,7 @@ public class SLtest7 {
         String sUpper = sSentence.toUpperCase();
         String[] arsWords = sUpper.split(" ");
         for (int i = 0; i < arsWords.length; i++) {
-            String sWord = arsWords[i]; 
+            String sWord = arsWords[i];
             bIsGood = IsGood(sWord);
             if (bIsGood == true) {
                 nGood++;
@@ -21,10 +21,11 @@ public class SLtest7 {
             }
             nTotal++;
         }
-        System.out.println(nTotal+" Total Words");
-        System.out.println(nGood+" Good Words");
-        System.out.println(nBad+" Bad Words");
+        System.out.println(nTotal + " Total Words");
+        System.out.println(nGood + " Good Words");
+        System.out.println(nBad + " Bad Words");
     }
+
     public static boolean IsGood(String sWord) {
         Character cLetter;
         for (int i = 0; i < sWord.length(); i++) {
